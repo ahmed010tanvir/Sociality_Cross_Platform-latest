@@ -36,7 +36,7 @@ export const SocketContextProvider = ({ children }) => {
     // Determine environment and socket URL
     const isProduction = import.meta.env.PROD;
     const socketUrl = isProduction
-      ? (import.meta.env.VITE_SOCKET_URL || 'https://sociality-backend-production.up.railway.app')
+      ? (import.meta.env.VITE_SOCKET_URL || window.location.origin)
       : '/'; // Use relative URL to leverage Vite proxy in development
 
     console.log("Socket URL:", socketUrl, isProduction ? "(production)" : "(via proxy)");

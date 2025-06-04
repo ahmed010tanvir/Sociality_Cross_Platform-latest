@@ -154,7 +154,7 @@ const Header = () => {
 						_hover={{ bg: "rgba(0, 204, 133, 0.1)" }}
 						position="relative"
 					>
-						<PhHouse
+						<House
 							size={28}
 							weight={isActive("/") ? "fill" : "bold"}
 							color={isActive("/") ? "#00CC85" : "#616161"}
@@ -174,7 +174,7 @@ const Header = () => {
 						_hover={{ bg: "rgba(0, 204, 133, 0.1)" }}
 						position="relative"
 					>
-						<PhMagnifyingGlass
+						<MagnifyingGlass
 							size={28}
 							weight={isActive("/search") ? "fill" : "bold"}
 							color={isActive("/search") ? "#00CC85" : "#616161"}
@@ -194,7 +194,7 @@ const Header = () => {
 						_hover={{ bg: "rgba(0, 204, 133, 0.1)" }}
 						position="relative"
 					>
-						<PhUser
+						<User
 							size={28}
 							weight="fill"
 							color={isActive("/:username") ? "#00CC85" : "#616161"}
@@ -214,7 +214,7 @@ const Header = () => {
 						_hover={{ bg: "rgba(0, 204, 133, 0.1)" }}
 						position="relative"
 					>
-						<PhBell
+						<Bell
 							size={28}
 							weight={isActive("/notifications") ? "fill" : "bold"}
 							color={isActive("/notifications") ? "#00CC85" : "#616161"}
@@ -234,7 +234,7 @@ const Header = () => {
 						_hover={{ bg: "rgba(0, 204, 133, 0.1)" }}
 						position="relative"
 					>
-						<PhChat
+						<Chat
 							size={28}
 							weight="fill"
 							color={isActive("/chat") ? "#00CC85" : "#616161"}
@@ -257,7 +257,7 @@ const Header = () => {
 						_hover={{ bg: "rgba(0, 204, 133, 0.1)" }}
 						position="relative"
 					>
-						<PhGear
+						<Gear
 							size={28}
 							weight={isActive("/settings") ? "fill" : "bold"}
 							color={isActive("/settings") ? "#00CC85" : "#616161"}

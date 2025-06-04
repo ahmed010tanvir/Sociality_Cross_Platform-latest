@@ -25,6 +25,13 @@ export const initializeSocket = (userId) => {
     return { socket: null, status: 'disconnected' };
   }
 
+  // Temporarily disable socket.io for serverless deployment
+  const isProduction = import.meta.env.PROD;
+  if (isProduction) {
+    console.log("Socket.io disabled in production (serverless environment)");
+    return { socket: null, status: 'disabled' };
+  }
+
   // If socket already exists and is connected, return it
   if (socketInstance && socketInstance.connected) {
     console.log("Reusing existing socket connection:", socketInstance.id);
@@ -35,9 +42,8 @@ export const initializeSocket = (userId) => {
   }
 
   // Determine socket URL based on environment
-  const isProduction = import.meta.env.PROD;
   const socketUrl = isProduction
-    ? (import.meta.env.VITE_SOCKET_URL || 'https://sociality-backend-production.up.railway.app') // Configurable backend server for Socket.IO
+    ? (import.meta.env.VITE_SOCKET_URL || window.location.origin) // Use current Vercel deployment URL
     : '/'; // Use relative URL for Vite proxy in development
 
   console.log("Creating new socket connection to:", socketUrl, isProduction ? "(production)" : "(via proxy)");
