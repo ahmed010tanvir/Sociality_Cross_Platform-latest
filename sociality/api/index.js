@@ -48,6 +48,9 @@ import logger from "../backend/utils/logger.js";
 // Initialize Express app
 const app = express();
 
+// Trust proxy for Vercel deployment (fixes express-rate-limit X-Forwarded-For error)
+app.set('trust proxy', 1);
+
 // Connect to database with error handling
 connectDB()
 	.then(() => console.log('Database connected successfully'))

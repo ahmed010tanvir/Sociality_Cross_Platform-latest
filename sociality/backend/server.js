@@ -203,9 +203,9 @@ server.listen(PORT, () => {
 // Function to register with federation registry
 async function registerWithFederation() {
 	try {
-		const federationRegistryUrl = 'http://localhost:7300';
-		const platformUrl = 'http://localhost:5000';
-		const platformName = 'sociality';
+		const federationRegistryUrl = process.env.FEDERATION_REGISTRY_URL || 'https://sociality-black.vercel.app';
+		const platformUrl = process.env.PLATFORM_URL || 'https://sociality-black.vercel.app';
+		const platformName = process.env.PLATFORM_NAME || 'sociality';
 
 		await axios.post(`${federationRegistryUrl}/federation/peers`, {
 			name: platformName,

@@ -30,6 +30,10 @@ const isMockConversationId = (id) => {
 };
 
 const app = express();
+
+// Trust proxy for Vercel deployment (fixes express-rate-limit X-Forwarded-For error)
+app.set('trust proxy', 1);
+
 const server = http.createServer(app);
 const io = new Server(server, {
 	cors: {

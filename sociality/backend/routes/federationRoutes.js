@@ -72,8 +72,8 @@ router.post("/rooms", async (req, res) => {
     await room.save();
 
     // Register room with federation registry
-    const federationRegistryUrl = process.env.FEDERATION_REGISTRY_URL || 'http://localhost:7300';
-    const platformUrl = process.env.PLATFORM_URL || 'http://localhost:5000';
+    const federationRegistryUrl = process.env.FEDERATION_REGISTRY_URL || 'https://sociality-black.vercel.app';
+    const platformUrl = process.env.PLATFORM_URL || 'https://sociality-black.vercel.app';
 
     try {
       await axios.post(`${federationRegistryUrl}/federation/rooms`, {
