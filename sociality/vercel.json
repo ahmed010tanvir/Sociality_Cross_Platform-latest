@@ -5,12 +5,14 @@
       "src": "backend/server.js",
       "use": "@vercel/node",
       "config": {
-        "maxDuration": 30
+        "maxDuration": 30,
+        "memory": 1024
       }
     }
   ],
   "env": {
-    "SERVE_FRONTEND": "true"
+    "SERVE_FRONTEND": "true",
+    "NODE_ENV": "production"
   },
   "rewrites": [
     {
