@@ -188,8 +188,6 @@ sociality/backend/platforms/
 
 ### 🚀 Production Deployment
 
-For detailed serverless deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
-
 **Quick Deploy to Vercel:**
 1. Fork this repository
 2. Connect to Vercel
