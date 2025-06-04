@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "buildCommand": "cd sociality && npm install && npm run build",
+  "outputDirectory": "sociality/frontend/dist",
+  "installCommand": "cd sociality && npm install",
+  "functions": {
+    "sociality/api/index.js": {
+      "maxDuration": 30
+    }
+  },
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/sociality/api/index.js"
+    },
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
