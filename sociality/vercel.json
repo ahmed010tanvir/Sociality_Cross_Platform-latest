@@ -2,7 +2,7 @@
   "version": 2,
   "builds": [
     {
-      "src": "frontend/package.json",
+      "src": "package.json",
       "use": "@vercel/static-build",
       "config": {
         "distDir": "frontend/dist"
@@ -10,10 +10,7 @@
     },
     {
       "src": "api/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "maxLambdaSize": "50mb"
-      }
+      "use": "@vercel/node"
     }
   ],
   "routes": [
@@ -23,17 +20,12 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/frontend/dist/index.html"
+      "dest": "/index.html"
     }
   ],
-  "env": {
-    "NODE_ENV": "production",
-    "SERVE_FRONTEND": "false"
-  },
   "functions": {
     "api/index.js": {
-      "maxDuration": 30,
-      "memory": 1024
+      "maxDuration": 30
     }
   }
 }
