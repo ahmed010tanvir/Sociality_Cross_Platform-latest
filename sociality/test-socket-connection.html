@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO Connection Test</title>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .status { padding: 10px; margin: 10px 0; border-radius: 5px; }
+        .connected { background-color: #d4edda; color: #155724; }
+        .disconnected { background-color: #f8d7da; color: #721c24; }
+        .connecting { background-color: #fff3cd; color: #856404; }
+        button { padding: 10px 20px; margin: 5px; cursor: pointer; }
+        #log { background: #f8f9fa; padding: 10px; border: 1px solid #dee2e6; height: 300px; overflow-y: auto; }
+    </style>
+</head>
+<body>
+    <h1>Socket.IO Connection Test</h1>
+    
+    <div>
+        <label for="serverUrl">Backend Server URL:</label>
+        <input type="text" id="serverUrl" value="https://sociality-backend-production.up.railway.app" style="width: 400px;">
+        <button onclick="connect()">Connect</button>
+        <button onclick="disconnect()">Disconnect</button>
+    </div>
+    
+    <div id="status" class="status disconnected">Disconnected</div>
+    
+    <div>
+        <button onclick="clearLog()">Clear Log</button>
+    </div>
+    
+    <div id="log"></div>
+
+    <script>
+        let socket = null;
+        const statusDiv = document.getElementById('status');
+        const logDiv = document.getElementById('log');
+
+        function log(message) {
+            const timestamp = new Date().toLocaleTimeString();
+            logDiv.innerHTML += `[${timestamp}] ${message}<br>`;
+            logDiv.scrollTop = logDiv.scrollHeight;
+        }
+
+        function updateStatus(status, className) {
+            statusDiv.textContent = status;
+            statusDiv.className = `status ${className}`;
+        }
+
+        function connect() {
+            const url = document.getElementById('serverUrl').value;
+            
+            if (socket) {
+                socket.disconnect();
+            }
+
+            log(`Attempting to connect to: ${url}`);
+            updateStatus('Connecting...', 'connecting');
+
+            socket = io(url, {
+                transports: ['polling'], // Use polling for better compatibility
+                timeout: 20000,
+                reconnection: true,
+                reconnectionAttempts: 3
+            });
+
+            socket.on('connect', () => {
+                log('✅ Connected successfully!');
+                log(`Socket ID: ${socket.id}`);
+                updateStatus('Connected', 'connected');
+            });
+
+            socket.on('disconnect', (reason) => {
+                log(`❌ Disconnected: ${reason}`);
+                updateStatus('Disconnected', 'disconnected');
+            });
+
+            socket.on('connect_error', (error) => {
+                log(`❌ Connection error: ${error.message}`);
+                updateStatus('Connection Failed', 'disconnected');
+            });
+
+            socket.on('error', (error) => {
+                log(`❌ Socket error: ${error}`);
+            });
+        }
+
+        function disconnect() {
+            if (socket) {
+                socket.disconnect();
+                log('Disconnected manually');
+                updateStatus('Disconnected', 'disconnected');
+            }
+        }
+
+        function clearLog() {
+            logDiv.innerHTML = '';
+        }
+
+        // Auto-connect on page load
+        window.onload = () => {
+            log('Page loaded. Click Connect to test Socket.IO connection.');
+        };
+    </script>
+</body>
+</html>

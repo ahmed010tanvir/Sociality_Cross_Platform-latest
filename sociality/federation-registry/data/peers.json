@@ -1,0 +1,23 @@
+[
+  {
+    "name": "sociality",
+    "url": "http://localhost:5000",
+    "registeredAt": "2025-06-01T17:40:30.435Z",
+    "lastSeen": "2025-06-01T17:40:30.435Z",
+    "status": "active"
+  },
+  {
+    "name": "telegram",
+    "url": "http://localhost:7301",
+    "registeredAt": "2025-06-01T17:40:30.439Z",
+    "lastSeen": "2025-06-01T17:40:30.439Z",
+    "status": "active"
+  },
+  {
+    "name": "discord",
+    "url": "http://localhost:7302",
+    "registeredAt": "2025-06-01T17:40:31.435Z",
+    "lastSeen": "2025-06-01T17:40:31.435Z",
+    "status": "active"
+  }
+]

@@ -1,0 +1,134 @@
+{
+  "038119c9-699d-406d-b52d-0674f56fbf05": {
+    "roomId": "038119c9-699d-406d-b52d-0674f56fbf05",
+    "name": "Hey",
+    "createdAt": "2025-05-31T13:59:54.727Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 175
+  },
+  "deb29428-cc4b-44ea-9bc9-5dee3fa8c2d9": {
+    "roomId": "deb29428-cc4b-44ea-9bc9-5dee3fa8c2d9",
+    "name": "Game",
+    "createdAt": "2025-06-01T11:08:27.398Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "98453b83-7d37-4a94-a0cf-4358d0cc2d55": {
+    "roomId": "98453b83-7d37-4a94-a0cf-4358d0cc2d55",
+    "name": "study",
+    "createdAt": "2025-06-01T12:07:54.097Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 3
+  },
+  "e6eb950e-1798-47e0-8bae-07947ad44c3a": {
+    "roomId": "e6eb950e-1798-47e0-8bae-07947ad44c3a",
+    "name": "Test",
+    "createdAt": "2025-06-01T12:29:08.632Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "28ff2648-7cd9-4faa-877a-19e6d96244de": {
+    "roomId": "28ff2648-7cd9-4faa-877a-19e6d96244de",
+    "name": "Test",
+    "createdAt": "2025-06-01T12:29:18.468Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "2c039542-6d06-41d1-80c2-0f00b4f33409": {
+    "roomId": "2c039542-6d06-41d1-80c2-0f00b4f33409",
+    "name": "wer",
+    "createdAt": "2025-06-01T15:11:59.503Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "9291b665-9fa7-45b5-bb8a-f9e90e4b8f32": {
+    "roomId": "9291b665-9fa7-45b5-bb8a-f9e90e4b8f32",
+    "name": "eawr",
+    "createdAt": "2025-06-01T15:12:02.583Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "529e1fa2-4470-4a2a-85a5-4dd42649b871": {
+    "roomId": "529e1fa2-4470-4a2a-85a5-4dd42649b871",
+    "name": "aewr",
+    "createdAt": "2025-06-01T15:12:05.238Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "4ab37f7e-86f1-49c9-be0f-66428fe94cf2": {
+    "roomId": "4ab37f7e-86f1-49c9-be0f-66428fe94cf2",
+    "name": "tres",
+    "createdAt": "2025-06-01T15:13:17.350Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "45d094be-11ca-4080-a304-324afe59ba5e": {
+    "roomId": "45d094be-11ca-4080-a304-324afe59ba5e",
+    "name": "rest",
+    "createdAt": "2025-06-01T15:13:19.848Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "78862db0-f23a-423a-a36a-66560c8918fc": {
+    "roomId": "78862db0-f23a-423a-a36a-66560c8918fc",
+    "name": "ret",
+    "createdAt": "2025-06-01T15:13:22.781Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  },
+  "cac2faa4-760b-4c0a-af14-e96104ca99b9": {
+    "roomId": "cac2faa4-760b-4c0a-af14-e96104ca99b9",
+    "name": "erts",
+    "createdAt": "2025-06-01T15:13:28.078Z",
+    "peers": [
+      "http://localhost:5000",
+      "http://localhost:7301",
+      "http://localhost:7302"
+    ],
+    "messageCount": 0
+  }
+}

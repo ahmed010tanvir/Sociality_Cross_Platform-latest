@@ -1,0 +1,75 @@
+.no-border-tab,
+.no-border-tab::before,
+.no-border-tab::after,
+.no-border-tab *,
+.no-border-tab *::before,
+.no-border-tab *::after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.no-border-tab:hover,
+.no-border-tab:focus,
+.no-border-tab:active,
+.no-border-tab[aria-selected="true"],
+.no-border-tab:hover::before,
+.no-border-tab:focus::before,
+.no-border-tab:active::before,
+.no-border-tab[aria-selected="true"]::before,
+.no-border-tab:hover::after,
+.no-border-tab:focus::after,
+.no-border-tab:active::after,
+.no-border-tab[aria-selected="true"]::after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+.no-border-tablist,
+.no-border-tablist::before,
+.no-border-tablist::after,
+.no-border-tablist *,
+.no-border-tablist *::before,
+.no-border-tablist *::after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.no-border-tabs,
+.no-border-tabs::before,
+.no-border-tabs::after,
+.no-border-tabs *,
+.no-border-tabs *::before,
+.no-border-tabs *::after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/* Target Chakra UI specific classes */
+[role="tablist"],
+[role="tab"],
+[role="tabpanel"] {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Target any potential pseudo-elements */
+[role="tablist"]::before,
+[role="tablist"]::after,
+[role="tab"]::before,
+[role="tab"]::after,
+[role="tabpanel"]::before,
+[role="tabpanel"]::after {
+    border: none !important;
+    outline: none !important;
+}
+
+/* Override any potential border styles */
+.glass-tab {
+    border: none !important;
+    outline: none !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}

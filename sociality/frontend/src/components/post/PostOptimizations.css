@@ -1,0 +1,47 @@
+/**
+ * CSS optimizations for Post components
+ * These styles help reduce layout thrashing and improve rendering performance
+ */
+
+/* Use will-change to hint to the browser about properties that will change */
+.post-container {
+  will-change: transform;
+  contain: content;
+  transform: translateZ(0); /* Force GPU acceleration */
+  backface-visibility: hidden; /* Prevent flickering in some browsers */
+}
+
+/* Optimize image rendering */
+.post-image {
+  will-change: opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  contain: paint;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Optimize click handlers */
+.post-action {
+  will-change: opacity;
+  transition: opacity 0.2s ease;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Prevent layout shifts with fixed aspect ratios */
+.image-container {
+  aspect-ratio: 16/9;
+  background-color: #101010;
+  contain: layout;
+  min-height: 200px;
+}
+
+/* Optimize modal rendering */
+.modal-content {
+  will-change: transform, opacity;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}

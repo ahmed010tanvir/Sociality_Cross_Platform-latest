@@ -1,0 +1,104 @@
+.modalHeader {
+    padding: 0;
+    border-bottom: 1px solid;
+    border-color: rgba(0, 204, 133, 0.2);
+}
+
+.tabList {
+    display: flex;
+    width: 100%;
+}
+
+.tab {
+    flex: 1;
+    font-weight: 600;
+    padding: 16px 4px;
+    position: relative;
+    text-align: center;
+    transition: all 0.2s;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tab:hover {
+    color: white;
+    background-color: rgba(0, 204, 133, 0.05);
+}
+
+.tabSelected {
+    color: white;
+    position: relative;
+}
+
+.tabSelected::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 204, 133, 0.8);
+    box-shadow: 0 0 8px rgba(0, 204, 133, 0.5);
+}
+
+.userItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 8px;
+    transition: all 0.2s;
+    border-radius: 8px;
+    margin: 2px 4px;
+}
+
+.userItem:hover {
+    background-color: rgba(0, 204, 133, 0.05);
+    transform: translateY(-1px);
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.userDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: 500;
+    color: white;
+}
+
+.username:hover {
+    text-decoration: underline;
+}
+
+.name {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(0, 204, 133, 0.15), transparent);
+    margin: 4px 0;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.emptyStateText {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.emptyStateSubtext {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
