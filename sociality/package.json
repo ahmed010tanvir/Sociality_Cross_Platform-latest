@@ -2,12 +2,12 @@
 	"name": "sociality",
 	"version": "1.0.0",
 	"description": "",
-	"main": "backend/server.js",
+	"main": "api/index.js",
 	"scripts": {
 		"dev": "cross-env NODE_ENV=development nodemon -r dotenv/config backend/server.js",
-		"start": "cross-env NODE_ENV=production node backend/server.js",
-		"build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
-		"vercel-build": "echo 'Build completed'",
+		"start": "cross-env NODE_ENV=production node api/index.js",
+		"build": "npm install --prefix frontend && npm run build --prefix frontend",
+		"vercel-build": "npm run build",
 		"migrate:users": "node backend/scripts/migrateExistingUsers.js"
 	},
 	"type": "module",
