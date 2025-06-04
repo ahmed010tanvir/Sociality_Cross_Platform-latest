@@ -2,7 +2,7 @@ import cron from "cron";
 import https from "https";
 import logger from "../utils/logger.js";
 
-const URL = "https://threads-clone-9if3.onrender.com";
+const URL = "https://sociality-backend-production.up.railway.app";
 
 const job = new cron.CronJob("*/14 * * * *", function () {
 	https
