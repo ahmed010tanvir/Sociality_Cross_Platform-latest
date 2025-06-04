@@ -6,8 +6,14 @@ import { fileURLToPath } from 'url';
 // Load environment variables
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const envPath = path.resolve(__dirname, '../.env');
-dotenv.config({ path: envPath });
+
+// Try to load .env file, but don't fail if it doesn't exist (for production)
+try {
+	const envPath = path.resolve(__dirname, '../.env');
+	dotenv.config({ path: envPath });
+} catch (error) {
+	console.log('No .env file found, using environment variables');
+}
 
 // Import all the necessary modules
 import connectDB from "../backend/db/connectDB.js";
@@ -42,8 +48,13 @@ import logger from "../backend/utils/logger.js";
 // Initialize Express app
 const app = express();
 
-// Connect to database
-connectDB();
+// Connect to database with error handling
+connectDB()
+	.then(() => console.log('Database connected successfully'))
+	.catch((error) => {
+		console.error('Database connection failed:', error.message);
+		// Don't exit in serverless environment, let individual requests handle DB errors
+	});
 
 cloudinary.config({
 	cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
