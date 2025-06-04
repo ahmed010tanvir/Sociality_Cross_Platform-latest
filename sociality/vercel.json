@@ -22,14 +22,6 @@
       "dest": "/api/index.js"
     },
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(favicon\\.png|favicon3\\.png|icon\\.svg)",
-      "dest": "/$1"
-    },
-    {
       "handle": "filesystem"
     },
     {
